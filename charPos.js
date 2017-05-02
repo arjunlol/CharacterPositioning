@@ -2,12 +2,14 @@
 function countLetters (letters){
   var countOfLetters = {};
   var lettersWtihSpaces = letters.toLowerCase();
-  letters = letters.split(" ").join("").toLowerCase();
+  //letters = letters.split(" ").join("").toLowerCase();
   var i =0;
-  for (l of letters){
+  for (l of lettersWtihSpaces){
     if (countOfLetters[l]) {
       countOfLetters[l].push(lettersWtihSpaces.indexOf(l,i));
-      //countOfLetters[l] = arrayOfIndex;
+    } else if (l == " "){
+        // i++;
+        // continue;
     } else {
       countOfLetters[l] = [];
       countOfLetters[l].push(lettersWtihSpaces.indexOf(l));
